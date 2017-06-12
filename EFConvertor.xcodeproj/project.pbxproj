@@ -207,7 +207,7 @@
 					};
 					BE1B3A4B1EEE59310082A761 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = T644RF2U69;
+						DevelopmentTeam = D975HMHLA6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -390,7 +390,7 @@
 				DEVELOPMENT_TEAM = T644RF2U69;
 				INFOPLIST_FILE = EFConvertor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eastmoney.jijin.EFConvertor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -406,7 +406,7 @@
 				DEVELOPMENT_TEAM = T644RF2U69;
 				INFOPLIST_FILE = EFConvertor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eastmoney.jijin.EFConvertor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -419,10 +419,10 @@
 				CODE_SIGN_ENTITLEMENTS = EFColorStandardizing/EFColorStandardizing.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = T644RF2U69;
+				DEVELOPMENT_TEAM = D975HMHLA6;
 				INFOPLIST_FILE = EFColorStandardizing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eastmoney.jijin.EFConvertor.EFColorStandardizing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -435,10 +435,10 @@
 				CODE_SIGN_ENTITLEMENTS = EFColorStandardizing/EFColorStandardizing.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = T644RF2U69;
+				DEVELOPMENT_TEAM = D975HMHLA6;
 				INFOPLIST_FILE = EFColorStandardizing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eastmoney.jijin.EFConvertor.EFColorStandardizing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -464,6 +464,7 @@
 				BE1B3A471EEE58CF0082A761 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE1B3A5D1EEE59310082A761 /* Build configuration list for PBXNativeTarget "EFColorStandardizing" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +473,7 @@
 				BE1B3A5F1EEE59310082A761 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
