@@ -16,6 +16,10 @@
 		BE1B3A551EEE59310082A761 /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1B3A541EEE59310082A761 /* SourceEditorExtension.m */; };
 		BE1B3A581EEE59310082A761 /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1B3A571EEE59310082A761 /* SourceEditorCommand.m */; };
 		BE1B3A5C1EEE59310082A761 /* EFColorStandardizing.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE1B3A4C1EEE59310082A761 /* EFColorStandardizing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BE5B22611EFA1DDB0031CC71 /* EFColorMapUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5B22601EFA1DDB0031CC71 /* EFColorMapUtil.m */; };
+		BE5B22631EFA3A000031CC71 /* ef_color_map.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE5B22621EFA3A000031CC71 /* ef_color_map.plist */; };
+		BE5B22641EFA3A330031CC71 /* ef_color_map.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE5B22621EFA3A000031CC71 /* ef_color_map.plist */; };
+		BE5B22651EFA3AB60031CC71 /* EFColorMapUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5B22601EFA1DDB0031CC71 /* EFColorMapUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		BE1B3A561EEE59310082A761 /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
 		BE1B3A571EEE59310082A761 /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
 		BE1B3A591EEE59310082A761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE5B225F1EFA1DDB0031CC71 /* EFColorMapUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFColorMapUtil.h; sourceTree = "<group>"; };
+		BE5B22601EFA1DDB0031CC71 /* EFColorMapUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFColorMapUtil.m; sourceTree = "<group>"; };
+		BE5B22621EFA3A000031CC71 /* ef_color_map.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ef_color_map.plist; sourceTree = "<group>"; };
+		BEF9FCC41EFA441800536C4C /* EFConvertor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EFConvertor.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +111,14 @@
 		BE1B3A331EEE58CF0082A761 /* EFConvertor */ = {
 			isa = PBXGroup;
 			children = (
+				BEF9FCC41EFA441800536C4C /* EFConvertor.entitlements */,
 				BE1B3A341EEE58CF0082A761 /* AppDelegate.h */,
 				BE1B3A351EEE58CF0082A761 /* AppDelegate.m */,
 				BE1B3A3A1EEE58CF0082A761 /* ViewController.h */,
 				BE1B3A3B1EEE58CF0082A761 /* ViewController.m */,
+				BE5B225F1EFA1DDB0031CC71 /* EFColorMapUtil.h */,
+				BE5B22601EFA1DDB0031CC71 /* EFColorMapUtil.m */,
+				BE5B22621EFA3A000031CC71 /* ef_color_map.plist */,
 				BE1B3A3D1EEE58CF0082A761 /* Assets.xcassets */,
 				BE1B3A3F1EEE58CF0082A761 /* Main.storyboard */,
 				BE1B3A421EEE58CF0082A761 /* Info.plist */,
@@ -204,11 +216,21 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = T644RF2U69;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 					BE1B3A4B1EEE59310082A761 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = D975HMHLA6;
+						DevelopmentTeam = T644RF2U69;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -237,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE1B3A3E1EEE58CF0082A761 /* Assets.xcassets in Resources */,
+				BE5B22631EFA3A000031CC71 /* ef_color_map.plist in Resources */,
 				BE1B3A411EEE58CF0082A761 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5B22641EFA3A330031CC71 /* ef_color_map.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE1B3A3C1EEE58CF0082A761 /* ViewController.m in Sources */,
+				BE5B22611EFA1DDB0031CC71 /* EFColorMapUtil.m in Sources */,
 				BE1B3A391EEE58CF0082A761 /* main.m in Sources */,
 				BE1B3A361EEE58CF0082A761 /* AppDelegate.m in Sources */,
 			);
@@ -265,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5B22651EFA3AB60031CC71 /* EFColorMapUtil.m in Sources */,
 				BE1B3A551EEE59310082A761 /* SourceEditorExtension.m in Sources */,
 				BE1B3A581EEE59310082A761 /* SourceEditorCommand.m in Sources */,
 			);
@@ -385,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EFConvertor/EFConvertor.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = T644RF2U69;
@@ -401,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EFConvertor/EFConvertor.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = T644RF2U69;
@@ -419,7 +447,7 @@
 				CODE_SIGN_ENTITLEMENTS = EFColorStandardizing/EFColorStandardizing.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = D975HMHLA6;
+				DEVELOPMENT_TEAM = T644RF2U69;
 				INFOPLIST_FILE = EFColorStandardizing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -435,7 +463,7 @@
 				CODE_SIGN_ENTITLEMENTS = EFColorStandardizing/EFColorStandardizing.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = D975HMHLA6;
+				DEVELOPMENT_TEAM = T644RF2U69;
 				INFOPLIST_FILE = EFColorStandardizing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;

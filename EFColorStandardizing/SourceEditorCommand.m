@@ -7,6 +7,8 @@
 //
 
 #import "SourceEditorCommand.h"
+#import "EFColorMapUtil.h"
+
 
 @implementation SourceEditorCommand
 
@@ -32,9 +34,14 @@
         return;
     }
     
-    
     NSString *selectionString = [line substringWithRange:NSMakeRange(start.column, end.column - start.column)];
-    NSString *standardColor = [self standardColrStatementWith:[selectionString stringByReplacingOccurrencesOfString:@"0x" withString:@""]];
+    if ([selectionString isEqualToString:@"version"]) {
+        invocation.buffer.lines[start.line] = [line stringByAppendingFormat:@"//适用于开发版本：%@", [EFColorMapUtil version]];
+        completionHandler(nil);
+        return;
+    }
+    
+    NSString *standardColor = [EFColorMapUtil standardColrStatementWith:[selectionString stringByReplacingOccurrencesOfString:@"0x" withString:@""]];
     if (!standardColor) {
         completionHandler(nil);
         return;
@@ -48,41 +55,6 @@
 }
 
 
-- (NSString *)standardCodeMapsWith:(NSString *)hexColor
-{
-    NSDictionary *maps = @{@"ffffff":@"C0",
-                           @"ff4400":@"C1",
-                           @"e8260c":@"C2",
-                           @"ff7475":@"C3",
-                           @"f5dad0":@"C4",
-                           @"fffbeb":@"C5",
-                           @"000000":@"C6",
-                           @"666666":@"C7",
-                           @"999999":@"C8",
-                           @"cccccc":@"C9",
-                           @"008aff":@"C10",
-                           @"007be4":@"C11",
-                           @"7cc3ff":@"C12",
-                           @"333333":@"C13",
-                           @"ff0000":@"C14",
-                           @"33cc33":@"C15",
-                           @"ff7748":@"C16",
-                           @"f8e81c":@"C17",
-                           @"dfdfdf":@"C18"
-                           };
-    return [maps objectForKey:hexColor];
-}
 
-- (NSString *)standardColrStatementWith:(NSString *)hexColor
-{
-    if (hexColor.length == 0) {
-        return nil;
-    }
-    NSString *standardCode = [self standardCodeMapsWith:[hexColor lowercaseString]];
-    if (standardCode.length == 0) {
-        return nil;
-    }
-    return [NSString stringWithFormat:@"[UIColor ef_color%@]", standardCode];
-}
 
 @end

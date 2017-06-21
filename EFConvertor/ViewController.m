@@ -7,22 +7,52 @@
 //
 
 #import "ViewController.h"
+#import "EFColorMapUtil.h"
+
+@interface ViewController ()
+
+@property (nonatomic, strong) IBOutlet NSTextField *versionLabel; /**<  */
+
+@end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Do any additional setup after loading the view.
     self.title = @"转换器";
+    [self refreshVersion];
+}
+
+- (void)refreshVersion
+{
+    [self.versionLabel setStringValue:[EFColorMapUtil version]];
 }
 
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
+- (IBAction)clickOpenButton:(id)sender
+{
+    [self openFile];
 }
 
+- (void)openFile
+{
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    [openPanel setPrompt: @"打开"];
+    
+    openPanel.allowedFileTypes = [NSArray arrayWithObjects: @"plist", nil];
+    openPanel.directoryURL = nil;
+    
+    [openPanel beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse returnCode) {
+        
+        if (returnCode == 1) {
+            NSURL *fileUrl = [[openPanel URLs] objectAtIndex:0];
+            NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfURL:fileUrl];
+            
+            [EFColorMapUtil updateConfig:dict];
+            [self refreshVersion];
+        }
+    }];
+}
 
 @end
