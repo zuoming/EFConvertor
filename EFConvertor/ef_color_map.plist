@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>version</key>
-	<string>1.0</string>
+	<string>5.0.0</string>
 	<key>maps</key>
 	<dict>
 		<key>ffffff</key>
@@ -14,9 +14,9 @@
 		<string>C2</string>
 		<key>ff7475</key>
 		<string>C3</string>
-		<key>f5dad0</key>
+		<key>ffd41d</key>
 		<string>C4</string>
-		<key>fffbeb</key>
+		<key>fff7bc</key>
 		<string>C5</string>
 		<key>000000</key>
 		<string>C6</string>
@@ -24,7 +24,7 @@
 		<string>C7</string>
 		<key>999999</key>
 		<string>C8</string>
-		<key>cccccc</key>
+		<key>eeeeee</key>
 		<string>C9</string>
 		<key>008aff</key>
 		<string>C10</string>
@@ -38,12 +38,14 @@
 		<string>C14</string>
 		<key>33cc33</key>
 		<string>C15</string>
-		<key>ff7748</key>
+		<key>cccccc</key>
 		<string>C16</string>
-		<key>f8e81c</key>
+		<key>ff7748</key>
 		<string>C17</string>
-		<key>dfdfdf</key>
+		<key>f5f5f5</key>
 		<string>C18</string>
+		<key>83a6cf</key>
+		<string>C19</string>
 	</dict>
 </dict>
 </plist>

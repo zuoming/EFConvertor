@@ -26,6 +26,7 @@
 
 - (void)refreshVersion
 {
+    NSString *ver = [EFColorMapUtil version];
     [self.versionLabel setStringValue:[EFColorMapUtil version]];
 }
 
